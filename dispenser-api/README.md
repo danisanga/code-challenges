@@ -46,6 +46,11 @@ service.
 ## Thinking process 🤔
 ![Thinking process](/dispenser-api/resources/thinking-process-diagram.png "Thinking process")
 
+## Future topics
+- Add Hibernate.
+- Dispenser status as enum.
+- Get DB data connection from properties.
+
 ---
 
 <p align="center">
