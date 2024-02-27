@@ -44,7 +44,7 @@ service.
 --- 
 
 ## Thinking process 🤔
-![Thinking process](/resources/thinking-process-diagram.svg "Thinking process"))
+![Thinking process](/dispenser-api/resources/thinking-process-diagram.png "Thinking process")
 
 ---
 
