@@ -43,6 +43,11 @@ service.
 
 --- 
 
+## Thinking process 🤔
+![Thinking process](/resources/thinking-process-diagram.svg "Thinking process"))
+
+---
+
 <p align="center">
   Made by <a href="https://rviewer.io">Rviewer</a>
 </p>
