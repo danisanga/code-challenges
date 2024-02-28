@@ -23,6 +23,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.security:spring-security-core:6.2.0'
     implementation 'org.springframework.boot:spring-boot-starter-security:3.2.0'
     implementation 'org.apache.logging.log4j:log4j-api:2.23.0'
@@ -34,17 +35,22 @@ dependencies {
     implementation 'io.jsonwebtoken:jjwt-jackson:0.12.3'
     implementation 'io.jsonwebtoken:jjwt-gson:0.12.3'
     implementation 'jakarta.xml.bind:jakarta.xml.bind-api:4.0.1'
+
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	testImplementation 'com.h2database:h2:2.1.212'
-	runtimeOnly 'org.postgresql:postgresql'
-	runtimeOnly 'io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64'
 	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'com.h2database:h2:2.1.212'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
     testImplementation 'org.mockito:mockito-core:5.10.0'
     testImplementation 'org.mockito:mockito-junit-jupiter:5.10.0'
     testImplementation 'org.assertj:assertj-core:3.25.3'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    runtimeOnly 'org.postgresql:postgresql'
+    // To fix M1 chips issues.
+    runtimeOnly 'io.netty:netty-resolver-dns-native-macos:4.1.80.Final:osx-aarch_64'
 }
 
 tasks.named('test') {
