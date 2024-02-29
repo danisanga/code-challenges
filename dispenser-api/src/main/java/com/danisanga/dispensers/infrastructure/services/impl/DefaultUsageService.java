@@ -15,12 +15,12 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class DefaultUsageService implements UsageService {
 
-    @Value("${beer.price}")
-    private Double beerPrice;
+    private final Double beerPrice;
 
     private final DispenserService dispenserService;
 
-    public DefaultUsageService(final DispenserService dispenserService) {
+    public DefaultUsageService(@Value("${beer.price}") final Double beerPrice, final DispenserService dispenserService) {
+        this.beerPrice = beerPrice;
         this.dispenserService = dispenserService;
     }
 
